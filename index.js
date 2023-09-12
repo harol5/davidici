@@ -15,5 +15,12 @@ function onYouTubeIframeAPIReady() {
       autoplay: 1,
       controls: 0,
     },
+    events: {
+      onReady: onPlayerReady,
+    },
   });
+}
+
+function onPlayerReady(event) {
+  event.target.playVideo();
 }
